@@ -1,0 +1,412 @@
+/*.container {
+  width:200px;
+  height:200px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  border:2px solid blue;
+}
+#first{
+  width:40px;
+  height:40px;
+  background-color:pink;
+  margin:5px;
+}
+#second{
+  width:40px;
+  height:40px;
+  background-color:pink;
+  margin:5px;
+  
+}
+#third{
+  width:40px;
+  height:40px;
+  background-color:pink;
+  margin:5px;
+
+}
+#fourth{
+  width:40px;
+  height:40px;
+  background-color:pink;
+  margin:5px;
+}
+.animate-me {
+  animation-name: tlo;
+  animation-duration: 3s;
+  animation-iteration-count:infinite;
+}
+@keyframes tlo{
+  0% {background-color: pink;}
+  25% {backround-color: pink;}
+  50% {background-color: lightblue;}
+  100% {background-color: lightblue;}
+}
+.animate-mesecond {
+  animation-name: tlo;
+  animation-duration: 3s;
+  animation-iteration-count:infinite;
+  animation-delay:0.5s
+}
+@keyframes tlo2{
+  0% {background-color: pink;}
+  25% {backround-color: pink;}
+  50% {background-color: lightblue;}
+  100% {background-color: lightblue;}
+}
+.animate-methird {
+  animation-name: tlo;
+  animation-duration: 3s;
+  animation-iteration-count:infinite;
+  animation-delay:1s;
+}
+@keyframes tlo3{
+  0% {background-color: pink;}
+  25% {backround-color: pink;}
+  50% {background-color: lightblue;}
+  100% {background-color: lightblue;}
+}
+.animate-mefourth {
+  animation-name: tlo;
+  animation-duration: 3s;
+  animation-iteration-count:infinite;
+  animation-delay:1.5s;
+}
+@keyframes tlo4{
+  0% {background-color: pink;}
+  25% {backround-color: pink;}
+  50% {background-color: lightblue;}
+  100% {background-color: lightblue;}
+}*/
+.container{
+    width:400px;
+    height:300px;
+    border:1px solid gray;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .one{
+    border: 2px solid red;
+    width:50px;
+    height:50px;
+    margin:20px;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+
+  }
+  .buttonone{
+    position: absolute;
+    top:200px;
+    width:60px;
+    border-radius:10px;
+    background-color: darkred;
+    transition: background-color 2s ease-in-out;
+    color:white;
+    cursor: pointer;
+
+  }
+  .buttonone:hover{
+    background-color: lightcoral;
+
+  }
+  .one>div{
+    height:40px;
+    width:40px;
+    background-color: darkred;
+    border-radius: 100%;
+    animation: one 1s ease-in-out infinite;
+    animation-fill-mode: both;
+ 
+  }
+  @keyframes one{
+    0%{
+     transform: scale(0);
+    }
+    100%{
+      transform: scale (2);
+      opacity:0.1;
+      
+    }
+  }
+  .buttontwo{
+    position: absolute;
+    top:200px;
+    width:60px;
+    border-radius:10px;
+    background-color: pink;
+    color:black;
+    cursor: pointer;
+    transition: background-color 2s ease-in-out;
+  }
+  .buttontwo:hover{
+    background-color: blueviolet;
+  }
+  .two{
+    border: 2px solid red;
+    width:50px;
+    height:50px;
+    margin:10px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .two > div{
+    width: 10px;
+    height: 10px;
+    background-color:violet;
+    border-radius: 100%;
+    margin:1px;
+  
+  }
+  .two>div:nth-child(1) {
+    animation-name:two;
+    animation-duration:0.7s;
+    animation-delay:-0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .two>div:nth-child(2) {
+    animation-name:two;
+    animation-duration:0.7s;
+    animation-delay:-0.1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .two>div:nth-child(3) {
+    animation-name: two;
+    animation-duration:0.7s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes two {
+    0%{
+      transform:translateY(7px);
+    }
+    33%{
+      transform:translateY(-7px);
+    }
+    100%{
+      transform:translateY(0);
+    }
+  }
+  .buttonThree{
+    position: absolute;
+    top:200px;
+    width:60px;
+    border-radius:10px;
+    background-color: lightgreen;
+    color:black;
+    cursor: pointer;
+    transition: background-color 2s ease-in-out;
+
+  }
+  .buttonThree:hover{
+    background-color: darkolivegreen;
+  }
+  .three{
+    border: 2px solid red;
+    width:50px;
+    height:50px;
+    margin:10px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .three > div {
+    animation-fill-mode:both;
+    border:3px solid lightgreen;
+    border-bottom-color:transparent;
+    height:20px;
+    width:20px;
+    border-radius:100%;
+    animation-name:spin;
+    display:inline-block;
+    animation-duration:0.8s;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+   
+  }
+  @keyframes spin{
+    0%{
+      transform:rotate(0deg) scale(1);
+    }
+    33%{
+      transform:rotate(180deg) scale(0.5);
+    }
+    100%{
+      transform:rotate(360deg) scale(1);
+    }
+  
+  }
+  .buttonFour{
+    position: absolute;
+    top:65px;
+    left:-5px;
+    width:60px;
+    border-radius:10px;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+  }
+  .buttonFour:hover{
+    background-color: beige;
+    color:black;
+  }
+  .four{
+    border: 2px solid red;
+    width:50px;
+    height:50px;
+    margin-top:50px;
+    margin-left:50px;
+    position: relative;
+    top:-25px;
+    left:-25px;
+  }
+ 
+ .four>div{
+      width:10px;
+      height:10px;
+      border-radius:100%;
+      border:solid 1px black;
+      margin:2px;
+      position:absolute;
+      left:17px;
+      bottom:17px;
+      
+  }
+  .four>div:nth-child(1){
+    animation-name: triangle-spin1;
+    animation-delay: 0;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+  }
+  .four>div:nth-child(2){
+    animation-name: triangle-spin3;
+    animation-delay: 0;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .four>div:nth-child(3){
+    animation-name: triangle-spin2;
+    animation-delay: 0;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes triangle-spin1 {
+ 33% {transform: translate(10px, -20px); }
+ 66% {transform: translate(20px, 0px); }
+ 100% {transform: translate(0px, 0px); }
+  }
+@keyframes triangle-spin2 {
+ 33% {transform: translate(10px, 20px); }
+ 66% {transform: translate(-10px,20px); }
+100% {transform: translate(0px, 0px); }
+  }
+@keyframes triangle-spin3 {
+ 33% {transform: translate(-20px, 0px); }
+ 66% {transform: translate(-10px, -20px); }
+100% {transform: translate(0px, 0px); }
+  }
+  .buttonFive{
+    position: absolute;
+    top:200px;
+    width:60px;
+    border-radius:10px;
+    background-color: blue;
+    color:white;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+
+  }
+  .buttonFive:hover{
+    background-color: lightblue;
+    color:darkslategray;
+
+  }
+  .five{
+    border: 2px solid red;
+    width:50px;
+    height:50px;
+    margin:10px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .five>div {
+    width: 4px;
+    height: 20px;
+    border-radius: 10px;
+    background-color:blue;
+    margin: 1px;
+    display: inline-block;
+  }
+
+  .five>div:nth-child(1) {
+    animation-name: sticks;
+    animation-duration: 1s;
+    animation-delay: -0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    }
+    .five>div:nth-child(2) {
+    animation-name: sticks;
+    animation-duration: 1s;
+    animation-delay: -0.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+    .five>div:nth-child(3) {
+    animation-name: sticks;
+    animation-duration: 1s;
+    animation-delay: -0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
+    .five>div:nth-child(4) {
+        animation-name: sticks;
+        animation-duration: 1s;
+        animation-delay: -0.1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
+    .five>div:nth-child(5) {
+        animation-name: sticks;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
+    .five>div:nth-child(6) {
+        animation-name: sticks;
+        animation-duration: 1s;
+        animation-delay: 0.1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
+    
+    
+
+
+  @keyframes sticks {
+      0% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(0.5);
+    
+      }
+      100% {
+          transform: scale(1);
+      }
+
+  }
+  
+  
