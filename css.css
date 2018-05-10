@@ -1,412 +1,810 @@
-/*.container {
-  width:200px;
-  height:200px;
+
+body{
+  background: radial-gradient(ellipse at center, rgba(65,77,56,1) 0%, rgba(36,33,35,1) 100%);
+  background-size: 100% 100%;
+}
+h1{
+text-align: center;
+font-family: 'Amatic SC';
+font-size:60px;
+color:white;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.container {
+  width:900px;
   display: flex;
-  justify-content:center;
-  align-items:center;
-  border:2px solid blue;
+  justify-content: space-around;
+  align-items: center;
+  margin:0 auto;
 }
-#first{
-  width:40px;
-  height:40px;
-  background-color:pink;
-  margin:5px;
+.one {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-#second{
-  width:40px;
-  height:40px;
-  background-color:pink;
-  margin:5px;
+.one-anim{ 
+}
+
+.buttonone {
+  position: absolute;
+  top: 240px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: White;
+  transition: background-color 1s ease-in-out;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.buttonone:hover {
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+.one-anim > div {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 100%;
+  animation: one 1s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+@keyframes one {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale (2);
+    opacity: 0.2;
+  }
+}
+.buttontwo {
+  position: absolute;
+  top: 240px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+.buttontwo:hover {
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+.two{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.two-anim{
   
 }
-#third{
-  width:40px;
-  height:40px;
-  background-color:pink;
-  margin:5px;
+.two-anim > div {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 100%;
+  margin: 1px;
+}
+.two-anim > div:nth-child(1) {
+  animation-name: two;
+  animation-duration: 0.7s;
+  animation-delay: -0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.two-anim > div:nth-child(2) {
+  animation-name: two;
+  animation-duration: 0.7s;
+  animation-delay: -0.1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.two-anim > div:nth-child(3) {
+  animation-name: two;
+  animation-duration: 0.7s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
-}
-#fourth{
-  width:40px;
-  height:40px;
-  background-color:pink;
-  margin:5px;
-}
-.animate-me {
-  animation-name: tlo;
-  animation-duration: 3s;
-  animation-iteration-count:infinite;
-}
-@keyframes tlo{
-  0% {background-color: pink;}
-  25% {backround-color: pink;}
-  50% {background-color: lightblue;}
-  100% {background-color: lightblue;}
-}
-.animate-mesecond {
-  animation-name: tlo;
-  animation-duration: 3s;
-  animation-iteration-count:infinite;
-  animation-delay:0.5s
-}
-@keyframes tlo2{
-  0% {background-color: pink;}
-  25% {backround-color: pink;}
-  50% {background-color: lightblue;}
-  100% {background-color: lightblue;}
-}
-.animate-methird {
-  animation-name: tlo;
-  animation-duration: 3s;
-  animation-iteration-count:infinite;
-  animation-delay:1s;
-}
-@keyframes tlo3{
-  0% {background-color: pink;}
-  25% {backround-color: pink;}
-  50% {background-color: lightblue;}
-  100% {background-color: lightblue;}
-}
-.animate-mefourth {
-  animation-name: tlo;
-  animation-duration: 3s;
-  animation-iteration-count:infinite;
-  animation-delay:1.5s;
-}
-@keyframes tlo4{
-  0% {background-color: pink;}
-  25% {backround-color: pink;}
-  50% {background-color: lightblue;}
-  100% {background-color: lightblue;}
-}*/
-.container{
-    width:400px;
-    height:300px;
-    border:1px solid gray;
-    display: flex;
-    justify-content:center;
-    align-items:center;
+@keyframes two {
+  0% {
+    transform: translateY(7px);
   }
-  .one{
-    border: 2px solid red;
-    width:50px;
-    height:50px;
-    margin:20px;
-    display:flex;
-    align-items:center;
-    justify-content: space-around;
-
+  33% {
+    transform: translateY(-7px);
   }
-  .buttonone{
-    position: absolute;
-    top:200px;
-    width:60px;
-    border-radius:10px;
-    background-color: darkred;
-    transition: background-color 2s ease-in-out;
-    color:white;
-    cursor: pointer;
-
+  100% {
+    transform: translateY(0);
   }
-  .buttonone:hover{
-    background-color: lightcoral;
-
-  }
-  .one>div{
-    height:40px;
-    width:40px;
-    background-color: darkred;
-    border-radius: 100%;
-    animation: one 1s ease-in-out infinite;
-    animation-fill-mode: both;
- 
-  }
-  @keyframes one{
-    0%{
-     transform: scale(0);
-    }
-    100%{
-      transform: scale (2);
-      opacity:0.1;
-      
-    }
-  }
-  .buttontwo{
-    position: absolute;
-    top:200px;
-    width:60px;
-    border-radius:10px;
-    background-color: pink;
-    color:black;
-    cursor: pointer;
-    transition: background-color 2s ease-in-out;
-  }
-  .buttontwo:hover{
-    background-color: blueviolet;
-  }
-  .two{
-    border: 2px solid red;
-    width:50px;
-    height:50px;
-    margin:10px;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-  }
-  .two > div{
-    width: 10px;
-    height: 10px;
-    background-color:violet;
-    border-radius: 100%;
-    margin:1px;
+}
+.buttonThree {
+  position: absolute;
+  top: 240px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+.buttonThree:hover {
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+.three{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.three-anim{
   
+}
+.three-anim > div {
+  animation-fill-mode: both;
+  border: 3px solid white;
+  border-bottom-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  animation-name: spin;
+  display: inline-block;
+  animation-duration: 0.8s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
   }
-  .two>div:nth-child(1) {
-    animation-name:two;
-    animation-duration:0.7s;
-    animation-delay:-0.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  33% {
+    transform: rotate(180deg) scale(0.5);
   }
-  .two>div:nth-child(2) {
-    animation-name:two;
-    animation-duration:0.7s;
-    animation-delay:-0.1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  100% {
+    transform: rotate(360deg) scale(1);
   }
-  .two>div:nth-child(3) {
-    animation-name: two;
-    animation-duration:0.7s;
-    animation-delay: 0;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
+}
+.buttonFour {
+  position: absolute;
+  top: 59px;
+  right:4px;
+  width: 60px;
+  border-radius: 5px;
+  background-color:white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition:background-color 1s ease-in-out;
+}
+.buttonFour:hover {
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+.four{
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  position: relative;
+  top: -25px;
+  left: -16px;
+}
+.four-anim {
   
-  @keyframes two {
-    0%{
-      transform:translateY(7px);
-    }
-    33%{
-      transform:translateY(-7px);
-    }
-    100%{
-      transform:translateY(0);
-    }
-  }
-  .buttonThree{
-    position: absolute;
-    top:200px;
-    width:60px;
-    border-radius:10px;
-    background-color: lightgreen;
-    color:black;
-    cursor: pointer;
-    transition: background-color 2s ease-in-out;
-
-  }
-  .buttonThree:hover{
-    background-color: darkolivegreen;
-  }
-  .three{
-    border: 2px solid red;
-    width:50px;
-    height:50px;
-    margin:10px;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .three > div {
-    animation-fill-mode:both;
-    border:3px solid lightgreen;
-    border-bottom-color:transparent;
-    height:20px;
-    width:20px;
-    border-radius:100%;
-    animation-name:spin;
-    display:inline-block;
-    animation-duration:0.8s;
-    animation-delay:0s;
-    animation-iteration-count:infinite;
-    animation-timing-function:linear;
-   
-  }
-  @keyframes spin{
-    0%{
-      transform:rotate(0deg) scale(1);
-    }
-    33%{
-      transform:rotate(180deg) scale(0.5);
-    }
-    100%{
-      transform:rotate(360deg) scale(1);
-    }
-  
-  }
-  .buttonFour{
-    position: absolute;
-    top:65px;
-    left:-5px;
-    width:60px;
-    border-radius:10px;
-    background-color: black;
-    color:white;
-    cursor: pointer;
-    transition: all 2s ease-in-out;
-  }
-  .buttonFour:hover{
-    background-color: beige;
-    color:black;
-  }
-  .four{
-    border: 2px solid red;
-    width:50px;
-    height:50px;
-    margin-top:50px;
-    margin-left:50px;
-    position: relative;
-    top:-25px;
-    left:-25px;
-  }
- 
- .four>div{
-      width:10px;
-      height:10px;
-      border-radius:100%;
-      border:solid 1px black;
-      margin:2px;
-      position:absolute;
-      left:17px;
-      bottom:17px;
-      
-  }
-  .four>div:nth-child(1){
-    animation-name: triangle-spin1;
-    animation-delay: 0;
-    animation-duration:2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-
-  }
-  .four>div:nth-child(2){
-    animation-name: triangle-spin3;
-    animation-delay: 0;
-    animation-duration:2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-  .four>div:nth-child(3){
-    animation-name: triangle-spin2;
-    animation-delay: 0;
-    animation-duration:2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
+}
+.four-anim > div {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+  margin: 2px;
+  position: absolute;
+  left: 10px;
+  bottom: 25px;
+}
+.four-anim > div:nth-child(1) {
+  animation-name: triangle-spin1;
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.four-anim > div:nth-child(2) {
+  animation-name: triangle-spin3;
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.four-anim > div:nth-child(3) {
+  animation-name: triangle-spin2;
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 
 @keyframes triangle-spin1 {
- 33% {transform: translate(10px, -20px); }
- 66% {transform: translate(20px, 0px); }
- 100% {transform: translate(0px, 0px); }
+  33% {
+    transform: translate(10px, -20px);
   }
-@keyframes triangle-spin2 {
- 33% {transform: translate(10px, 20px); }
- 66% {transform: translate(-10px,20px); }
-100% {transform: translate(0px, 0px); }
+  66% {
+    transform: translate(20px, 0px);
   }
-@keyframes triangle-spin3 {
- 33% {transform: translate(-20px, 0px); }
- 66% {transform: translate(-10px, -20px); }
-100% {transform: translate(0px, 0px); }
+  100% {
+    transform: translate(0px, 0px);
   }
-  .buttonFive{
-    position: absolute;
-    top:200px;
-    width:60px;
-    border-radius:10px;
-    background-color: blue;
-    color:white;
-    cursor: pointer;
-    transition: all 2s ease-in-out;
-
-  }
-  .buttonFive:hover{
-    background-color: lightblue;
-    color:darkslategray;
-
-  }
-  .five{
-    border: 2px solid red;
-    width:50px;
-    height:50px;
-    margin:10px;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .five>div {
-    width: 4px;
-    height: 20px;
-    border-radius: 10px;
-    background-color:blue;
-    margin: 1px;
-    display: inline-block;
-  }
-
-  .five>div:nth-child(1) {
-    animation-name: sticks;
-    animation-duration: 1s;
-    animation-delay: -0.4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
-    }
-    .five>div:nth-child(2) {
-    animation-name: sticks;
-    animation-duration: 1s;
-    animation-delay: -0.3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
 }
-    .five>div:nth-child(3) {
-    animation-name: sticks;
-    animation-duration: 1s;
-    animation-delay: -0.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
-    .five>div:nth-child(4) {
-        animation-name: sticks;
-        animation-duration: 1s;
-        animation-delay: -0.1s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
-    .five>div:nth-child(5) {
-        animation-name: sticks;
-        animation-duration: 1s;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
-    .five>div:nth-child(6) {
-        animation-name: sticks;
-        animation-duration: 1s;
-        animation-delay: 0.1s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);}
-    
-    
+@keyframes triangle-spin2 {
+  33% {
+    transform: translate(10px, 20px);
+  }
+  66% {
+    transform: translate(-10px, 20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes triangle-spin3 {
+  33% {
+    transform: translate(-20px, 0px);
+  }
+  66% {
+    transform: translate(-10px, -20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.buttonFive {
+  position: absolute;
+  top: 240px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: bacground-color 1s ease-in-out;
+}
+.buttonFive:hover {
+  background-color: lightgray;  
+  box-shadow:0px 0px 20px#666666;
+}
+.five{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.five-anim{
+  
+}
+.five-anim > div {
+  width: 4px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 1px;
+  display: inline-block;
+}
+
+.five-anim > div:nth-child(1) {
+  animation-name: sticks;
+  animation-duration: 1s;
+  animation-delay: -0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+.five-anim > div:nth-child(2) {
+  animation-name: sticks;
+  animation-duration: 1s;
+  animation-delay: -0.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+.five-anim > div:nth-child(3) {
+  animation-name: sticks;
+  animation-duration: 1s;
+  animation-delay: -0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+.five-anim > div:nth-child(4) {
+  animation-name: sticks;
+  animation-duration: 1s;
+  animation-delay: -0.1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+.five-anim > div:nth-child(5) {
+  animation-name: sticks;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+.five-anim > div:nth-child(6) {
+  animation-name: sticks;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+@keyframes sticks {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.six{
+  width:50px;
+  height:50px;
+  margin:10px;
+}
 
 
-  @keyframes sticks {
-      0% {
-          transform: scale(1);
-      }
-      50% {
-          transform: scale(0.5);
-    
-      }
-      100% {
-          transform: scale(1);
-      }
+.square1, .square2 {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top:175px;
+  left:735px;
+  animation: squaremov 1.8s infinite ease-in-out;
+  visibility: hidden;
+ 
+}
+.square2 {
+  animation-delay: -0.9s;
+ 
+}
+.six-none{  
+  visibility: visible;
 
+}
+@keyframes squaremov {
+  25% { 
+    transform: translateX(25px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(25px) translateY(42px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(25px) translateY(42px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+  }
+}
+.buttonsix {
+  position: absolute;
+  top: 240px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+.buttonsix:hover {
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+
+.seven{
+  width:50px;
+  height:50px;
+  margin:10px;
+}
+
+.follow-round {
+  display: inline-block;
+  position:relative;
+  left:10px;
+  top:10px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: follow-round 1.5s linear infinite;
+  visibility: hidden;
+}
+.sev-anim{
+  visibility: visible;
+}
+
+@keyframes follow-round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.buttonseven {
+  position: absolute;
+  top: 240px;
+  left:802px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+.buttonseven:hover {
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+
+.eight{
+  width:50px;
+  height:50px;
+  margin:10px;
+}
+.left-eye, .right-eye {
+  width: 5px;
+  height:5px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top:32%;
+  left:67%;
+  transform: translate( -50%, -50% );
+  animation: leftEyeAnimation 3s infinite cubic-bezier( 0.455, 0.030, 0.515, 0.955 );
+  visibility: hidden;
+}
+  
+.right-eye{
+  animation: rightEyeAnimation 3s infinite cubic-bezier( 0.455, 0.030, 0.515, 0.955 );
+  visibility: hidden;
+}
+  
+.smile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 3px white;
+  border-right: solid 3px rgba( 223, 223, 194, 0 );
+  border-left: solid 3px rgba( 223, 223, 194, 0 );
+  border-bottom: solid 3px rgba( 223, 223, 194, 0 );
+  position: absolute;
+  top:32%;
+  left:67%;
+  transform: translate( -50%, -50% ) rotate( 360deg );
+  animation: smileAnimation 3s infinite cubic-bezier( 0.455, 0.030, 0.515, 0.955 );
+  visibility: hidden;
+}
+.eight-anim{
+  animation: leftEyeAnimation 3s infinite cubic-bezier( 0.455, 0.030, 0.515, 0.955 );
+  visibility: visible;
+}
+.eight-anim2{
+  animation: rightEyeAnimation 3s infinite cubic-bezier( 0.455, 0.030, 0.515, 0.955 );
+  visibility: visible;
+}
+.eight-anim3{
+  animation: smileAnimation 3s infinite cubic-bezier( 0.455, 0.030, 0.515, 0.955 );
+  visibility: visible;
+
+}
+  
+@keyframes smileAnimation{
+
+0% {
+  transform: translate ( -50%, -50% ) rotateX( 180deg );
+}
+10%{
+  transform: translate( -50%, -50% ) rotateZ( 360deg );
+}
+40%{
+  transform: translate( -50%, -50% ) rotateZ( 320deg );
+}
+60%{
+  transform: translate( -50%, -50% ) rotateZ( 900deg );
+}
+100%{
+  transform: translate( -50%, -50% ) rotateZ( 900deg );
+}
+}
+  
+@keyframes leftEyeAnimation{
+0%{
+  width: 10px;
+  height: 10px;
+  transform: translate( -50%, -50% );}
+50%{
+  width: 10px;
+  height: 10px;
+  transform: translate( -50%, -50% );}
+60%{
+  width: 5px;
+  height: 5px;
+  transform: translate( -150%, -50% );}
+90%{
+  width: 5px;
+  height:5px;
+  transform: translate( -150%, -50% );}
+100%{
+  width: 10px;
+  height: 10px;
+  transform: translate( -50%, -50% );}
+}
+  
+@keyframes rightEyeAnimation {
+0%{
+  width: 10px;
+  height: 10px;
+  transform: translate( -50%, -50% );}
+50%{
+  width: 10px;
+  height:10px;
+  transform: translate( -50%, -50% );}
+60%{
+  width: 5px;
+  height:5px;
+  transform: translate( 50%, -50% );}
+70%{
+  width:5px;
+  height: 5px;
+  transform: translate( 50%, -50% );}
+75%{
+  width: 5px;
+  height: 0.5px;
+  transform:translate( 50%, -50% );}
+80%{
+  width: 5px;
+  height:0.5px;
+  transform: translate( 50%, -50% )}
+90%{
+  width:5px;
+  height: 5px;
+  transform: translate( 50%, -50% );}
+100%{
+  width: 10px;
+  height: 10px;
+  transform: translate( -50%, -50% );}
+}
+
+.buttoneight{
+  position: absolute;
+  top: 240px;
+  left:887px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+.buttoneight:hover{
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+
+.nine{
+  width:50px;
+  height:50px;
+  margin:10px;
+}
+.buttonnine {
+  width: 60px;
+  position:absolute;
+  right:330px;
+  top:240px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+.buttonnine:hover {
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+}
+.stick {
+  display: inline-block;
+  position:relative;
+  left:15px;
+  top:-13px;
+  width: 10px;
+  height: 2px;
+  background-color:white;
+  border-radius: 100px;
+  margin-top: 35px;
+  visibility: hidden;
+}
+.stick-anim{
+animation: stick1 4s ease infinite;
+visibility: visible;
+}
+@keyframes stick1 {
+  0% {
+    transform: rotate(-20deg);
+    height: 2px;
+    width: 20px;
+  }
+  5% {
+    height: 2px;
+    width: 20px;    
+  }
+  30% {
+    transform: rotate(380deg);
+    height: 2px;
+    width: 20px;    
+  }
+  40% {
+    transform: rotate(360deg);
+    height: 2px;
+    width: 20px;    
+  } 
+  55% {
+    transform: rotate(0deg);
+    height: 2px;
+    width: 1px;    
+  }
+  65% {
+    transform: rotate(0deg);
+    height: 2px;
+    width: 25px;    
+  }
+  68% {
+    transform: rotate(0deg);
+    height: 2px;
+  }
+  75% {
+    transform: rotate(0deg);
+    height: 2px;
+    width: 0.2px;    
+  }
+  78% {
+    height: 2px;
+    width: 1px;    
+  }
+  90% {
+    height: 2px;
+    width: 20px;  
+    transform: rotate(0deg);
+  }
+  99%, 100% {
+    height: 2px;
+    width: 20px;   
+    transform: rotate(-20deg);
+  }
+}
+
+.ten{
+  width:50px;
+  height:50px;
+  margin:10px;
+}
+.buttonten{
+  position: absolute;
+  top: 240px;
+  right:246px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family:"Amatic SC";
+  font-size:15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.buttonten:hover{
+  background-color: lightgray;
+  box-shadow:0px 0px 20px#666666;
+
+}
+.loader-square {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top:15px;
+  left:15px;
+  border: 2px solid white;
+  animation: loader-square 4s infinite ease;
+  visibility: hidden;
+}
+
+.loader-inside{
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  animation: loader-inside 4s infinite ease-in;
+  visibility:hidden;
+}
+.ten-anim{
+  visibility: visible;
+}
+
+@keyframes loader-square {
+  0% {
+    transform: rotate(0deg);
   }
   
+  25% {
+    transform: rotate(180deg);
+  }
   
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inside {
+  0% {
+    height: 0px;
+  }
+  
+  25% {
+    height: 0px;
+  }
+  
+  50% {
+    height: 15px;
+  }
+  
+  75% {
+    height: 15px;
+  }
+  
+  100% {
+    height: 0px;
+  }
+}
